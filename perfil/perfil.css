@@ -1,0 +1,474 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9fff0;
+}
+
+/* Botão flutuante "Adicionar local" */
+#btnAddLocalFloat {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg,#00a99d,#007a7a);
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
+  z-index: 1000; /* garante que fique acima do resto */
+}
+
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #003548;
+  color: #f9fff0;
+  position: fixed;
+  padding: 20px 10px;
+}
+
+/* Logo ajustada */
+.logo-img {
+    width: 130px;  /* tamanho da logo */
+    height: auto;  /* mantém proporção */
+    margin-top: 7px;
+}
+
+.sidebar nav a {
+  display: flex;              
+  align-items: center;      
+  gap: 3px;                  
+  color: #f9fff0;
+  text-decoration: none;
+    cursor: pointer;
+  margin: 25px 0 0 0;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.sidebar nav a .icon {
+  margin-right: 10px;
+}
+
+svg{
+  margin-left: 8px;
+}
+
+img{
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.profile-section {
+  background: #f0fff7;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.foto-upload {
+  margin-top: 10px;
+}
+
+.meus-lugares {
+  margin-top: 40px;
+
+}
+
+.meus-lugares h2 {
+  font-size: 30px;
+  color: #003548;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.lugares-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titulo{
+  font-size: 30px;
+}
+.lugar {
+  width: 160px;
+  background-color: #77cbb9;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.thumbnail {
+  background-color: #5fb3a1;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Container geral */
+.lugar-card {
+  background-color: #eff6da; /* fundo suave */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.lugar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Imagem */
+.lugar-thumb {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.lugar-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* mantém a proporção e preenche todo o container */
+  object-position: left center;  /* foca no lado esquerdo da imagem */
+  transition: transform 0.3s ease;
+  transform: translate(-7%);
+
+}
+
+/* Informações do lugar */
+.lugar-info {
+  padding: 15px;
+  background-color: #f1f7ed;
+  flex-grow: 1;
+}
+
+.lugar-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #003149;
+}
+
+.lugar-info .categoria {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #65b8a6;
+}
+
+/* Botões de ação */
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 15px;
+  background-color: #65b8a6;
+}
+
+.acoes button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #f1f7ed;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #003149;
+}
+
+.acoes button:hover {
+  transform: scale(1.05);
+}
+
+.plus {
+  font-size: 28px;
+  vertical-align: middle;
+  color: #007a7a;
+}
+
+.adicionar-lugar p {
+  cursor: pointer;
+  color: #007a7a;
+  font-weight: bold;
+  transition: 0.2s;
+  font-size: 20px;
+  margin-top:30PX;
+  margin-left: 130PX;
+
+}
+
+.adicionar-lugar p:hover {
+  color: #004d4d;
+}
+.foto-upload{
+ display: flex;
+border-color: #003548; 
+margin-left: 30px;
+
+
+}
+
+.foto-upload label {
+  background-color: #003548;  /* azul estilo Instagram */
+  color:  #f9fff0;
+  padding: 7px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.foto-upload label:hover {
+  background-color: #003548; /* azul mais escuro ao passar o mouse */
+  transform: scale(1.05);
+}
+
+/* Esconde o input original */
+.foto-upload input[type="file"] {
+  display: none;
+}
+
+#btnEditarBio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #003548; 
+  background-color:  #f9fff0;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  width: 100px;
+  height: 30px;
+  margin-left: -10px;
+}
+
+#foto-preview{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  }
+
+.sidebar a:first-child .icon svg {
+  width: 20px;          
+  height: 20px;
+  fill:  #f9fff0;           
+  vertical-align: middle; 
+  margin-right: 5px;      
+  transition: transform 0.2s ease;
+}
+
+/* Efeito sutil no hover */
+.sidebar a:first-child:hover .icon svg {
+  transform: scale(1.1);
+}
+
+.sidebar nav a svg {
+  width: 22px;
+  height: 22px;
+  fill: #f9fff0;
+  flex-shrink: 0;
+  display: block;             /* garante que o svg não crie espaçamento extra */
+}
+
+
+
+  /* === MEDIA QUERY === */
+
+@media screen and (max-width: 400px) {
+  html, body {
+    overflow-x: hidden; /* bloqueia rolagem lateral */
+    height: 100%;       /* evita overflow causado por margens */
+  
+
+  * {
+    box-sizing: border-box; /* garante que padding/bordas não “estourem” o layout */
+  }
+}
+
+  /* ==== BASE ==== */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f9fff0;
+    margin: 0;
+    padding: 0;
+  }
+
+    #btnAddLocalFloat {
+    width: 50px;          /* menor para caber melhor na tela */
+    height: 50px;
+    font-size: 28px;
+    right: 15px;          /* mantém afastado da borda */
+    bottom: 80px;         /* sobe acima da barra inferior */
+  }
+
+  .main-content {
+    padding-bottom: 160px; /* espaço suficiente pra barra inferior + botão */
+  }
+
+  /* ==== SIDEBAR COMO NAV INFERIOR ==== */
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 65px;
+    margin-top: -10px;
+    margin-bottom: -3px;
+    background-color: #003548;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  .sidebar nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sidebar nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    color: #f9fff0;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 12px;
+    padding-bottom: 20px;
+  }
+
+  /* ÍCONES MENORES */
+  .sidebar nav a svg {
+    width: 28px;
+    height: 28px;
+    fill: #f9fff0;
+  }
+
+  .logo-img {
+    display: none;
+  }
+
+  /* ==== CONTEÚDO PRINCIPAL ==== */
+  .main-content {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 120px; /* espaço pra barra inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  /* ==== PERFIL CENTRALIZADO ==== */
+  .perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #effffb;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100px;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.267);
+    margin-top: 10px;
+  }
+
+  #foto-preview {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  #btnEditarBio {
+    margin: 5px auto;
+    display: block;
+  }
+
+  /* ==== TÍTULO E TEXTOS ==== */
+  .meus-lugares h2 {
+    font-size: 34px;
+    margin-top: 25px;
+    text-align: center;
+    color: #003548;
+    margin-left: 13px;
+  }
+
+  .sem-lugares {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    margin-top: -8px;
+    line-height: 1.3;
+    margin-left: 3px;
+  }
+
+  .sem-lugares strong {
+    display: block;
+    margin-top: 6px;
+    font-weight: 900;
+    color: #005e6d;
+  }
+
+  .adicionar-lugar p{
+    margin-left: -2px;
+    font-size: 20px;
+  }
+
+  /* ==== CONTAINER DE LUGARES ==== */
+  .lugares-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .lugar {
+    width: 130px;
+    font-size: 14px;
+    text-align: center;
+  }
+}

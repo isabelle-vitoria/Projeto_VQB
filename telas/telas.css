@@ -1,0 +1,205 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7e5;
+}
+
+/* ===== SIDEBAR DESKTOP ===== */
+.sidebar {
+  width: 200px;
+  background-color: #0f3b52;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo-img {
+  width: 130px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 7px;
+  margin-left: -20px;
+}
+
+.sidebar nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 17px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar nav a:hover {
+  background-color: #1e5d7b;
+}
+
+.sidebar .icon {
+  margin-right: 10px;
+}
+
+/* ===== CONTEÚDO ===== */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #002d3c;
+}
+
+/* ===== CARDS ===== */
+.lugares-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.lugar-card {
+  background-color: #003149 ;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.lugar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.lugar-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.lugar-info {
+  padding: 10px 15px;
+}
+
+.lugar-info h3 {
+  font-size: 18px;
+  color: #f5f7e5;
+  margin-bottom: 5px;
+}
+
+.lugar-info p {
+  font-size: 14px;
+  color: #d2f9f1;
+}
+
+/* ===== MEDIA QUERY: MOBILE (iPhone 12 Pro) ===== */
+@media screen and (max-width: 400px){
+  body {
+    flex-direction: column;
+    padding-bottom: 70px; /* espaço para a barra inferior */
+  }
+
+  /* Sidebar vira barra inferior */
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #0f3b52;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+  }
+
+  .logo-img {
+    display: none; /* oculta logo grande */
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .sidebar nav a {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .sidebar .icon {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Conteúdo principal */
+  .main-content {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  header h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .lugares-container {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .lugar-card {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+
+  .lugar-card img {
+    height: 120px;
+  }
+
+  .lugar-info {
+    padding: 8px 12px;
+  }
+
+  .lugar-info h3 {
+    font-size: 15px;
+  }
+
+  .lugar-info p {
+    font-size: 12px;
+  }
+}

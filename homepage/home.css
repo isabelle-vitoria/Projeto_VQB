@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f6f0;
+  color: #2a2a2a;
+  overflow-x: hidden; /* remove rolamento lateral */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.topo {
+  background-color: #00334d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 35px; /* header mais alto */
+  position: relative;
+}
+
+.logo img {
+  height: 55px;
+  margin-top: 10px;
+}
+
+.menu-hamburguer {
+  background: none;
+  border: none;
+  color: #f0f7da;
+  font-size: 34px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.fallback-icon {
+  display: none;
+  font-size: 32px;
+}
+
+/* mostra fallback se ícone não carregar */
+.fa-solid.fa-bars:before {
+  content: "\f0c9";
+}
+.menu-hamburguer i {
+  font-size: 34px;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 85px;
+  right: 35px;
+  background-color: #00334d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.menu-lateral a {
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.menu-lateral a:hover {
+  background-color: #004b6a;
+}
+
+.menu-lateral.ativo {
+  display: flex;
+}
+
+.btnLogout {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff !important; /* texto branco puro */
+  text-decoration: none;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  filter: none !important; /* remove possíveis filtros herdados */
+  opacity: 1 !important;   /* garante opacidade total */
+}
+
+/* estados: mantém branco */
+.btnLogout:link,
+.btnLogout:visited,
+.btnLogout:hover,
+.btnLogout:active {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* ícone SVG segue a cor do texto */
+.btnLogout svg {
+  fill: currentColor !important; /* usa a mesma cor do texto */
+  transition: 0.3s ease;
+} 
+
+.referencia {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff !important; /* força o branco */
+  text-decoration: none !important;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.referencia svg {
+  fill: currentColor; /* ícone branco */
+  transition: 0.3s ease;
+}
+
+/* IMAGEM TOPO */
+.imagem-topo {
+  margin-bottom: 0; /* encosta na faixa */
+}
+
+.imagem-topo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SOBRE NÓS */
+.sobre-nos {
+  text-align: center;
+  padding: 0; /* remove espaçamento lateral e superior */
+  margin: 0;
+}
+
+/* faixa azul 100% colada à imagem */
+.titulo-faixa {
+  background-color: #00334d;
+  color: #f0f7da;
+  width: 100vw; /* força a faixa a ocupar toda a largura da tela */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* remove qualquer limite lateral da seção */
+  margin-right: -50vw;
+  padding: 18px 0;
+  margin-top: 0;
+}
+
+.titulo-faixa h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.sobre-nos p {
+  font-size: 21px;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 65px auto 0;
+  color: #333;
+  padding: 0 15px;
+}
+
+/* EXPLORAR */
+.explore {
+  text-align: center;
+  padding: 30px 10px 120px; /* mais espaço inferior pro footer */
+}
+
+.explore h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  color: #00334d;
+  margin-bottom: 55px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.10);
+}
+
+.card h3 {
+  margin-top: 10px;
+  color: #00334d;
+  font-size: 20px;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+  margin-top: -21px;
+  line-height: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; /* remove o underline */
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background-color: #00334d;
+  color: #f0f7da;
+  text-align: center;
+  padding: 15px 15px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.logo-footer {
+  height: 70px;
+  width: 200px;
+  margin-left: 90px;
+}
+
+.footer-info {
+  max-width: 300px;
+  line-height: 1.8;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 400px) {
+
+.imagem-topo {
+  width: 100%;
+  height: 400px; /* altura desejada */
+  overflow: hidden; /* corta o excesso */
+}
+
+.imagem-topo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantém proporção e corta o necessário */
+  object-position: 66% center; /* 0% é totalmente à esquerda, 50% é central, 100% totalmente à direita */
+  display: block;
+}
+
+  .titulo-faixa {
+    margin-bottom: -20px;
+  }
+
+    .sobre-nos p {
+    font-size: 16px;
+    padding: 0 15px;
+    text-align: justify;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .explore{
+    max-width: 100%;
+    padding: 30px 25px 100px 25px; 
+  }
+
+  .explore h2 {
+  margin-top: -5px;
+  margin-bottom: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  line-height: 45px;
+  color: #00334d;
+
+}
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+  }
+
+
+  .card:hover {
+  transform: scale(1.10);
+}
+
+  .card p {
+  color: #666;
+  font-size: 16px;
+  margin-top: -20px;
+  margin-bottom: 800px;
+  line-height: 20px;
+}
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.logo-footer {
+  height: 55px;
+  width: 180px;
+  margin-left: 20px;
+}

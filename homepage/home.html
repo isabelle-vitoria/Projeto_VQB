@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vai que é bom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <script
+      src="https://kit.fontawesome.com/3c2e83f7a6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="topo">
+      <div class="logo">
+        <img src="./imagens/logoamarela.png" alt="Vai que é bom" />
+      </div>
+
+      <button class="menu-hamburguer" id="menu-btn" aria-label="Abrir menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="45"
+          height="45"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </button>
+
+      <nav class="menu-lateral" id="menu">
+
+        <a href="../login/login.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-door-open"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"
+            />
+            <path
+              d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"
+            />
+          </svg>
+          Login
+        </a>
+
+        <a href="#contato">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telephone-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 
+               0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 
+               1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 
+               1.87.163 2.611l-1.034 1.034c-.74.74-1.846 
+               1.065-2.877.702a18.6 18.6 0 0 
+               1-7.01-4.42 18.6 18.6 0 0 
+               1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+            />
+          </svg>
+          Contato
+        </a>
+
+        <a href="#sobre-nos">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-question-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 
+               1 16 0M5.496 6.033h.825c.138 
+               0 .248-.113.266-.25.09-.656.54-1.134 
+               1.342-1.134.686 0 1.314.343 
+               1.314 1.168 0 .635-.374.927-.965 
+               1.371-.673.489-1.206 1.06-1.168 
+               1.987l.003.217a.25.25 0 0 0 
+               .25.246h.811a.25.25 0 0 0 
+               .25-.25v-.105c0-.718.273-.927 
+               1.01-1.486.609-.463 1.244-.977 
+               1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 
+               0-2.655.59-2.75 2.286a.237.237 
+               0 0 0 .241.247m2.325 
+               6.443c.61 0 1.029-.394 
+               1.029-.927 0-.552-.42-.94-1.029-.94-.584 
+               0-1.009.388-1.009.94 0 
+               .533.425.927 1.01.927z"
+            />
+          </svg>
+          Quem somos
+        </a>
+
+        <a id="btnPerfil" class="referencia">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle"
+            viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 
+              11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 
+              5.468 2.37A7 7 0 0 0 8 1" />
+          </svg>
+          Perfil
+        </a>
+
+        <a class="btnLogout">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-door-open"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"
+            />
+            <path
+              d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"
+            />
+          </svg>
+          Logout
+        </a>
+
+      </nav>
+
+    </header>
+
+    <section class="imagem-topo">
+      <img src="./imagens/turista.png" alt="Turistas felizes" />
+    </section>
+
+    <section class="sobre-nos" id="sobre-nos">
+      <div class="titulo-faixa">
+        <h2>SOBRE NÓS</h2>
+      </div>
+      <p>
+        O Vai Que é Bom é o site ideal para quem quer curtir o melhor da região!
+        Aqui você encontra dicas e indicações de lugares incríveis para visitar,
+        comer e se divertir nas cidades de Bebedouro, Barretos, Olímpia e
+        Ribeirão Preto. Nosso objetivo é te ajudar a descobrir novos pontos,
+        valorizar o que há de melhor em cada cidade e viver boas experiências
+        com quem você ama!
+      </p>
+    </section>
+
+    <section class="explore">
+      <h2>Explore, descubra e aproveite!</h2>
+
+      <div class="cards">
+        <div class="card">
+          <a href="../telas/telas.html?cidade=Bebedouro">
+            <img src="./imagens/bebedouro.jpg" alt="Bebedouro" />
+            <h3>Bebedouro</h3>
+            <p>História e natureza</p>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="../telas/telas.html?cidade=Barretos">
+            <img src="./imagens/barretos.jpg" alt="Barretos" />
+            <h3>Barretos</h3>
+            <p>Cultura sertaneja</p>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="../telas/telas.html?cidade=Olímpia">
+            <img src="./imagens/olimpia.jpg" alt="Olímpia" />
+            <h3>Olímpia</h3>
+            <p>Lazer e diversão</p>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="../telas/telas.html?cidade=Ribeirão%20Preto">
+            <img src="./imagens/ribeirao.jpg" alt="Ribeirão Preto" />
+            <h3>Ribeirão Preto</h3>
+            <p>Modernidade e variedade</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contato">
+      <div class="footer-content">
+        <img
+          src="./imagens/logoamarela.png"
+          alt="Vai que é bom"
+          class="logo-footer"
+          width="150px"
+        />
+        <div class="footer-info">
+          <p>
+            (17) 3342-1721<br />
+            SESI-SP de Bebedouro (CE 110).<br />
+            Rua João Batista Catalani, 800 - Parque Eldorado
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./home.js"></script>
+  </body>
+</html>
