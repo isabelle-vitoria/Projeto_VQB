@@ -54,8 +54,9 @@
       type="password"
       id="senha"
       placeholder="Digite sua senha"
-      required
-    />
+      pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[\W_]).{8,}"
+      title="Mínimo 8 caracteres, incluindo maiúscula, minúscula, número e especial." required
+        />
     <img src="./imagens/view.png" id="toggleSenha" alt="mostrar senha" />
   </div>
 </div>

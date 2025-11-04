@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             body: JSON.stringify({ descricao: novaBio })
           });
           if (resp.status == 200) {
-            alert("Bio atualizada com sucesso!");
+          
           }
         } catch (err) {
           console.error("Erro ao atualizar bio:", err);

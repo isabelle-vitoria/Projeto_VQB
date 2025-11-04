@@ -75,8 +75,13 @@ entrar.addEventListener('click', async function (event) {
 
       // redireciona para a página de perfil
       window.location.href = "../login/login.html";
-    } else {
-      alert("Erro ao cadastrar");
+    }
+
+      else if(resposta.status === 400){
+        alert("Senha fraca demais! Mínimo 8 caracteres, incluindo maiúscula, minúscula, número e caractere especial")
+    }
+      else {
+      alert("Sua senha está fraca demais!");
       console.log("Erro no cadastro");
     }
   } catch (erro) {

@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -58,10 +58,15 @@ body {
   margin-right: 10px;
 }
 
+svg{
+  width: 24px;
+  height: 24px;
+}
+
 /* ===== CONTEÚDO ===== */
 .main-content {
   flex: 1;
-  padding: 40px;
+  padding: 30px;
 }
 
 header h1 {
@@ -75,13 +80,15 @@ header h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  width: 100%;
   justify-content: flex-start;
 }
 
 .lugar-card {
   background-color: #003149 ;
   border-radius: 12px;
-  width: 250px;
+  width: 295px;
+  height: auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
@@ -106,12 +113,15 @@ header h1 {
 .lugar-info h3 {
   font-size: 18px;
   color: #f5f7e5;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
+  margin-top: -10px;
+  line-height: 1.2;
 }
 
 .lugar-info p {
   font-size: 14px;
-  color: #d2f9f1;
+  color: #d2f9ea;
+  margin-top: -7px;
 }
 
 /* ===== MEDIA QUERY: MOBILE (iPhone 12 Pro) ===== */
@@ -127,13 +137,13 @@ header h1 {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 90px;
     background-color: #0f3b52;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 10px 0 0;
     z-index: 1000;
   }
 
@@ -142,6 +152,8 @@ header h1 {
   }
 
   .sidebar nav {
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
@@ -168,6 +180,7 @@ header h1 {
   .main-content {
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   header h1 {

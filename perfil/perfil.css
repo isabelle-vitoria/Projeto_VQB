@@ -1,7 +1,12 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; /* garante que padding/bordas não “estourem” o layout */
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9fff0;
+  background-color: #eff6da;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Botão flutuante "Adicionar local" */
@@ -14,7 +19,7 @@ body {
   border-radius: 50%;
   border: none;
   background: linear-gradient(135deg,#00a99d,#007a7a);
-  color: #fff;
+  color: #eff6da;
   font-size: 32px;
   line-height: 1;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
@@ -29,9 +34,10 @@ body {
 
 .sidebar {
   width: 200px;
-  height: 100vh;
+  height: 100%;
   background-color: #003548;
   color: #f9fff0;
+  font-family: 'Poppins', sans-serif;
   position: fixed;
   padding: 20px 10px;
 }
@@ -43,15 +49,23 @@ body {
     margin-top: 7px;
 }
 
+.sidebar nav a:hover {
+  background-color: #1e5d7b;
+  border-radius: 4px;
+}
+
 .sidebar nav a {
   display: flex;              
   align-items: center;      
   gap: 3px;                  
   color: #f9fff0;
+  width: 100%;
+  height: 40px;
   text-decoration: none;
-    cursor: pointer;
-  margin: 25px 0 0 0;
+  cursor: pointer;
+  margin: 15px 0 0 0;
   font-size: 18px;
+  font-family: 'Poppins', sans-serif;
   transition: 0.2s;
 }
 
@@ -74,7 +88,9 @@ img{
 }
 
 .profile-section {
-  background: #f0fff7;
+  background: #f9fff0;
+  color: #003149;
+  font-family: 'Poppins', sans-serif;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -84,24 +100,28 @@ img{
   display: flex;
   align-items: center;
   gap: 20px;
+  line-height: 20px;
+  margin-bottom: -10px;
 }
 
-.foto-upload {
+.dados{
   margin-top: 10px;
+  margin-bottom: -40px;
 }
 
 .meus-lugares {
   margin-top: 40px;
-
+  font-family: 'Poppins', sans-serif;
 }
 
 .meus-lugares h2 {
-  font-size: 30px;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
   color: #003548;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Open Sans", sans-serif;
+  margin-bottom: -10px;
 }
 
 .lugares-container {
@@ -113,9 +133,13 @@ img{
   align-items: center;
   justify-content: center;
 }
+
 .titulo{
   font-size: 30px;
+  color: #003149;
+  font-family: 'Poppins', sans-serif;
 }
+
 .lugar {
   width: 160px;
   background-color: #77cbb9;
@@ -124,8 +148,12 @@ img{
   text-align: center;
 }
 
+div.lugar-info{
+  background-color:  #f9fff0;
+}
+
 .thumbnail {
-  background-color: #5fb3a1;
+  background-color:  #77cbba;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
@@ -133,7 +161,7 @@ img{
 
 /* Container geral */
 .lugar-card {
-  background-color: #eff6da; /* fundo suave */
+  background-color: #effffb; /* fundo suave */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -171,7 +199,7 @@ img{
 /* Informações do lugar */
 .lugar-info {
   padding: 15px;
-  background-color: #f1f7ed;
+  background-color: #eff6da;
   flex-grow: 1;
 }
 
@@ -184,7 +212,7 @@ img{
 .lugar-info .categoria {
   margin-top: 5px;
   font-size: 0.9rem;
-  color: #65b8a6;
+  color: #00a99d;
 }
 
 /* Botões de ação */
@@ -193,7 +221,7 @@ img{
   justify-content: center;
   gap: 20px;
   padding: 10px 15px;
-  background-color: #65b8a6;
+  background-color: #003149;
 }
 
 .acoes button {
@@ -201,11 +229,11 @@ img{
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 0.9rem;
-  color: #f1f7ed;
+  color: #003149;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  background-color: #003149;
+  background-color: #f1f7ed;
 }
 
 .acoes button:hover {
@@ -221,27 +249,26 @@ img{
 .adicionar-lugar p {
   cursor: pointer;
   color: #007a7a;
-  font-weight: bold;
   transition: 0.2s;
   font-size: 20px;
   margin-top:30PX;
-  margin-left: 130PX;
+  margin-left: 160PX;
 
 }
 
 .adicionar-lugar p:hover {
   color: #004d4d;
 }
+
 .foto-upload{
  display: flex;
 border-color: #003548; 
-margin-left: 30px;
-
-
+margin-left: 35px;
+margin-top: 15px;
 }
 
 .foto-upload label {
-  background-color: #003548;  /* azul estilo Instagram */
+  background-color: #003149;  /* azul estilo Instagram */
   color:  #f9fff0;
   padding: 7px 20px;
   border-radius: 10px;
@@ -262,14 +289,16 @@ margin-left: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-color: #003548; 
-  background-color:  #f9fff0;
+  background-color:#f9fff0;
+  color: #003149;
+  border: solid 2px;
+  border-color: #003149;
+  cursor: pointer;
   border-radius: 20px;
   margin-bottom: 20px;
   margin-top: 15px;
   width: 100px;
   height: 30px;
-  margin-left: -10px;
 }
 
 #foto-preview{
@@ -307,13 +336,8 @@ margin-left: 30px;
 @media screen and (max-width: 400px) {
   html, body {
     overflow-x: hidden; /* bloqueia rolagem lateral */
-    height: 100%;       /* evita overflow causado por margens */
-  
-
-  * {
-    box-sizing: border-box; /* garante que padding/bordas não “estourem” o layout */
+    height: 100%;       /* evita overflow */
   }
-}
 
   /* ==== BASE ==== */
   body {
@@ -321,7 +345,7 @@ margin-left: 30px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: #f9fff0;
+    background-color: #eff6da;
     margin: 0;
     padding: 0;
   }
@@ -343,17 +367,15 @@ margin-left: 30px;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 65px;
-    margin-top: -10px;
-    margin-bottom: -3px;
-    background-color: #003548;
+    width: 100%;
+    height: 70px;
+    background-color: #0f3b52;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 18px 18px 0 0;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
-    z-index: 999;
+    padding: 0 10px;
+    z-index: 1000;
   }
 
   .sidebar nav {
@@ -364,22 +386,19 @@ margin-left: 30px;
   }
 
   .sidebar nav a {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 3px;
-    font-size: 11px;
-    color: #f9fff0;
-    text-decoration: none;
-    cursor: pointer;
-    margin-left: 12px;
-    padding-bottom: 20px;
+    font-size: 12px;
+    color: white;
+    margin: 0;
+    padding: 5px;
   }
 
   /* ÍCONES MENORES */
   .sidebar nav a svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     fill: #f9fff0;
   }
 
