@@ -43,9 +43,9 @@ entrar.addEventListener('click', async function (event) {
       
       // redireciona conforme a função
       if (usuario.funcao === "admin") {
-        window.location.href = "../homepage/home.html";
+        window.location.href = "../homepage/index.html";
       } else {
-        window.location.href = "../homepage/home.html";
+        window.location.href = "../homepage/index.html";
       }
     } else {
       alert("Usuário ou senha incorretos!");
