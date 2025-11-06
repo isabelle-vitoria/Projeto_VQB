@@ -4,6 +4,8 @@
 * {
   box-sizing: border-box;
   transition: 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 html, body {
@@ -247,6 +249,12 @@ textarea {
 #final {
   display: flex;
   gap: 10px;
+}
+
+option{
+  color: white;
+  background-color: #003142;
+  border-radius: 50px;
 }
 
 select {
