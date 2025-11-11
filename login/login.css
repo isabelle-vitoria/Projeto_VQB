@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
 *{
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
 }
 
 input[type="password"]::-ms-reveal,
@@ -19,13 +18,18 @@ body {
   height: 100vh;
 }
 
+svg{
+  width: 24px;
+  height: 24px;
+  margin-left: -180px;
+margin-bottom: -15px;
+}
+
 h1.titulo {
-  font-family: "Open Sans", sans-serif;
   margin: 15px 0 5px;
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   color: #003049;
   align-self: flex-start;
@@ -33,7 +37,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-style: extra-bold;
   margin-top: 5px;
@@ -48,7 +51,6 @@ h2 {
   border: none;
   background-color: #003049;
   color: #f0f7da;
-  font-family: "Open Sans", sans-serif;
   cursor: pointer;
   margin-bottom: 15px;
 }
@@ -92,7 +94,6 @@ input {
   border-radius: 50px;
   border: 1px solid rgb(4, 4, 4);
   padding-left: 10px;
-  font-family: "Open Sans", sans-serif;
   font-size: 13px;
 }
 
@@ -293,7 +294,7 @@ a {
 }
 
   .logo {
-    order: -2;
+    order: -3;
     width: 150px;
     height: auto;
     margin-bottom: 5px;
@@ -338,4 +339,24 @@ a {
   a {
     font-size: 15px;
   }
+
+  /* Centralizar a casinha no topo */
+  .login a svg {
+    order: -1;
+    position: absolute;
+    top: 15px;           /* distância do topo */
+    left: 50%;           /* centraliza horizontalmente */
+    transform: translateX(-50%);
+    margin: 0;           /* remove margens antigas */
+    width: 28px;
+    height: 28px;
+    color: #003049;
+  }
+  
+  /* Evita que o SVG empurre o conteúdo */
+  .login {
+    position: relative;
+    padding-top: 50px;   /* espaço pra casinha não cobrir o conteúdo */
+  }
+
 }

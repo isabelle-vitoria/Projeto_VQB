@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // Verifica se o ID do usuário existe no localStorage
+  const userId = localStorage.getItem("idUsuario");
+
+  if (!userId) {
+    alert("Você precisa estar logado para acessar esta página.");
+    // Redireciona para a tela de login
+    window.location.href = "../login/login.html";
+    return; // impede execução do resto da página
+  }
+
+  // Se o ID existir, a página continua normalmente
+  console.log("Usuário logado, ID:", userId);
+});
+
 document.getElementById("btnLogout")?.addEventListener("click", () => {
   // Confirma se o usuário quer sair
   const confirmar = confirm("Deseja realmente sair?");
@@ -65,11 +80,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   function renderizarPerfil(container, nome, email, descricao, foto) {
     container.innerHTML = `
       <div class="perfil-topo">
-        <img src="${foto}" id="foto-preview" class="avatar" alt="foto de perfil">
+        <img src="${foto || "../perfil/imagens/sem-foto.png"}" id="foto-preview" class="avatar" alt="foto de perfil">
         <div class="dados">
           <h2>${nome}</h2>
           <p>${email}</p>
-          <p id="bio-text"><i>${descricao}</i></p>
+          <p id="bio-text"><i> ${descricao}</i></p>
           <textarea id="bio-input" style="display:none;">${descricao}</textarea>
           <button id="btnEditarBio">Editar Bio</button>
         </div>
