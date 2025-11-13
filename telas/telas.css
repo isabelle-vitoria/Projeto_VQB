@@ -76,7 +76,7 @@ header h1 {
   margin-bottom: 20px;
   margin-top: 20px;
   color: #002d3c;
-  margin-left: 45px;
+  margin-left: 20px;
 }
 
 /* ===== CARDS ===== */
@@ -130,7 +130,7 @@ header h1 {
 }
 
 /* ===== MEDIA QUERY: MOBILE (iPhone 12 Pro) ===== */
-@media screen and (width: 400px){
+@media screen and (max-width: 400px){
   body {
     flex-direction: column;
     padding-bottom: 70px; /* espaço para a barra inferior */
@@ -141,7 +141,8 @@ header h1 {
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 90px;
+    height: 60px;
+    width: 100%;
     background-color: #0f3b52;
     display: flex;
     flex-direction: row;
@@ -167,7 +168,8 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 10px;
+    text-align: center;
     color: white;
     margin: 0;
     padding: 5px;
@@ -185,17 +187,21 @@ header h1 {
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+  ;
   }
 
   header h1 {
     text-align: center;
     font-size: 36px;
+    margin-top: -5px;
     margin-bottom: 20px;
+    margin-left: 0px
   }
 
   .lugares-container {
     justify-content: center;
     gap: 15px;
+    margin-left: 0px
   }
 
   .lugar-card {
