@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Busca dados do usuário no servidor
   try {
-    const resposta = await fetch(`http://192.168.1.27:3000/perfil/${idUsuario}`);
+    const resposta = await fetch(`https://back-vqb-2.onrender.com/perfil/${idUsuario}`);
     if (!resposta.ok) throw new Error("Erro ao buscar usuário");
     const dados = await resposta.json();
     console.log(dados)
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const novaBio = bioInput.value;
         console.log(novaBio)
         try {
-          const resp = await fetch(`http://192.168.1.27:3000/usuario/descricao/${idUsuario}`, {
+          const resp = await fetch(`https://back-vqb-2.onrender.com/usuario/descricao/${idUsuario}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ descricao: novaBio })
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         localStorage.setItem("fotoPerfil", base64);
         console.log(idUsuario)
         try {
-          await fetch(`http://192.168.1.27:3000/usuario/foto/${idUsuario}`, {
+          await fetch(`https://back-vqb-2.onrender.com/usuario/foto/${idUsuario}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ foto_usuario: base64 })
@@ -163,9 +163,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       let resposta, locais;
 
       if (idUsuario == 1) {
-        resposta = await fetch(`http://192.168.1.27:3000/locais`);
+        resposta = await fetch(`https://back-vqb-2.onrender.com/locais`);
       } else {
-        resposta = await fetch(`http://192.168.1.27:3000/locais/usuario/${idUsuario}`);
+        resposta = await fetch(`https://back-vqb-2.onrender.com/locais/usuario/${idUsuario}`);
       }
 
       locais = await resposta.json();
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!confirmar) return;
 
     try {
-      const resp = await fetch(`http://192.168.1.27:3000/locais/${idLocal}`, {
+      const resp = await fetch(`https://back-vqb-2.onrender.com/locais/${idLocal}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id_usuario: idUsuario }),

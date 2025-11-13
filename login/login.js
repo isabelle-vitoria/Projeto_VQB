@@ -26,7 +26,7 @@ entrar.addEventListener('click', async function (event) {
   }
 
   try {
-    const resposta = await fetch(`http://192.168.1.27:3000/login`, {
+    const resposta = await fetch(`https://back-vqb-2.onrender.com/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, senha })

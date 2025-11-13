@@ -25,7 +25,7 @@ async function carregarLugares() {
     const local = document.querySelector("#local");
     local.innerText = cidade;
 
-    const response = await fetch(`http://192.168.1.27:3000/cidades/${cidade}`);
+    const response = await fetch(`https://back-vqb-2.onrender.com/cidades/${cidade}`);
     if (!response.ok) throw new Error("Erro ao buscar os lugares");
 
     const lugares = await response.json();

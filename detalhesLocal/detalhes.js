@@ -8,7 +8,7 @@ const detalhes = document.getElementById("detalhes");
         });
 
 if (id) {
-  fetch(`http://192.168.1.27:3000/locais/${id}`)
+  fetch(`https://back-vqb-2.onrender.com/locais/${id}`)
     .then(response => {
       if (!response.ok) throw new Error("Erro ao buscar o lugar");
       return response.json();
@@ -77,7 +77,7 @@ function formatarContato(contato) {
 async function carregarComentarios(id_local) {
   try {
     console.log("to aqui"+ id_local)
-    const resp = await fetch(`http://192.168.1.27:3000/comentarios/${id_local}`);
+    const resp = await fetch(`https://back-vqb-2.onrender.com/comentarios/${id_local}`);
     const comentarios = await resp.json();
 
     const container = document.querySelector("#comentarios");
@@ -120,7 +120,7 @@ console.log(idLocal, idUsuario, texto)
   if (!texto) return alert("Digite algo antes de enviar!");
 
   try {
-    const res = await fetch("http://192.168.1.27:3000/comentarios", {
+    const res = await fetch("https://back-vqb-2.onrender.com/comentarios", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -151,7 +151,7 @@ document.addEventListener("click", async e => {
     const funcao = localStorage.getItem("funcao");
 
     try {
-      const resp = await fetch(`http://192.168.1.27:3000/comentarios/${idComentario}`, {
+      const resp = await fetch(`https://back-vqb-2.onrender.com/comentarios/${idComentario}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ usuarioId: idUsuario, funcao })

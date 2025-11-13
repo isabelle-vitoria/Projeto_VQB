@@ -85,7 +85,7 @@
     const idLocalParaEditar = localStorage.getItem("localParaEditar");
     if (idLocalParaEditar) {
       try {
-        const resp = await fetch(`http://192.168.1.27:3000/locais/${idLocalParaEditar}`);
+        const resp = await fetch(`https://back-vqb-2.onrender.com/locais/${idLocalParaEditar}`);
         if (!resp.ok) throw new Error("Erro ao buscar local para edição");
         const local = await resp.json();
 
@@ -196,8 +196,8 @@
 
   try {
     const url = idLocal 
-      ? `http://192.168.1.27:3000/locais/${idLocal}`
-      : "http://192.168.1.27:3000/novolocal";
+      ? `https://back-vqb-2.onrender.com/locais/${idLocal}`
+      : "https://back-vqb-2.onrender.com/novolocal";
 
     const method = idLocal ? "PUT" : "POST";
 
