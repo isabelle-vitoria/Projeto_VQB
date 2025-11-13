@@ -13,13 +13,14 @@ body {
 
 /* ===== SIDEBAR DESKTOP ===== */
 .sidebar {
-  width: 200px;
   background-color: #0f3b52;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  width: 200px; /* <<< Fixe uma largura consistente */
+  flex-shrink: 0; /* <<< Impede o flex de reduzir o sidebar */
 }
 
 .logo-img {
@@ -27,7 +28,6 @@ body {
   height: auto;
   margin-bottom: 10px;
   margin-top: 7px;
-  margin-left: -20px;
 }
 
 .sidebar nav {
@@ -66,22 +66,27 @@ svg{
 /* ===== CONTEÚDO ===== */
 .main-content {
   flex: 1;
-  padding: 30px;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 header h1 {
   font-size: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   color: #002d3c;
+  margin-left: 45px;
 }
 
 /* ===== CARDS ===== */
 .lugares-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: start;
+  margin-left: 20px;
 }
 
 .lugar-card {
@@ -125,7 +130,7 @@ header h1 {
 }
 
 /* ===== MEDIA QUERY: MOBILE (iPhone 12 Pro) ===== */
-@media screen and (max-width: 400px){
+@media screen and (width: 400px){
   body {
     flex-direction: column;
     padding-bottom: 70px; /* espaço para a barra inferior */
@@ -136,7 +141,6 @@ header h1 {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
     height: 90px;
     background-color: #0f3b52;
     display: flex;
