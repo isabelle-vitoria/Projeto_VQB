@@ -138,7 +138,7 @@ header h1 {
 
   /* Sidebar vira barra inferior */
   .sidebar {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     height: 60px;
@@ -186,7 +186,7 @@ header h1 {
   .main-content {
     padding: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 150px;
   ;
   }
 

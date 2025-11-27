@@ -333,13 +333,9 @@ div.lugar-info {
 /* === MEDIA QUERY === */
 
 @media screen and (max-width: 400px) {
-  html,
-  body {
+  html, body {
     overflow-x: hidden; /* bloqueia rolagem lateral */
-    height: 100%; /* evita overflow */
   }
-
-  
 
   /* ==== BASE ==== */
   body {
@@ -353,20 +349,22 @@ div.lugar-info {
   }
 
   #btnAddLocalFloat {
+    position: fixed;
     width: 50px; /* menor para caber melhor na tela */
     height: 50px;
     font-size: 28px;
     right: 15px; /* mantém afastado da borda */
-    bottom: 80px; /* sobe acima da barra inferior */
+    z-index: 1000;
   }
 
   .main-content {
-    padding-bottom: 160px; /* espaço suficiente pra barra inferior + botão */
+    padding-bottom: 100px; /* espaço suficiente pra barra inferior + botão */
+    margin-top: -200px;
   }
 
   /* ==== SIDEBAR COMO NAV INFERIOR ==== */
   .sidebar {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -377,7 +375,7 @@ div.lugar-info {
     justify-content: space-around;
     align-items: center;
     padding: 0 10px;
-    z-index: 1000;
+    z-index: 999;
   }
 
   .sidebar nav {
@@ -459,7 +457,6 @@ div.lugar-info {
   /* ==== TÍTULO E TEXTOS ==== */
   .meus-lugares h2 {
     font-size: 34px;
-    margin-top: 25px;
     text-align: center;
     color: #003548;
     margin-left: 13px;
@@ -493,6 +490,7 @@ div.lugar-info {
     justify-content: center;
     gap: 12px;
     margin-top: 20px;
+    margin-bottom: 100px;
   }
 
   .lugar {
