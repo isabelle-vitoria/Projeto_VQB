@@ -224,7 +224,7 @@
     
   } catch (error) {
     console.error("Erro na requisição:", error);
-    alert("Falha na comunicação com o servidor.");
+    alert("Preencha todos os campos.");
   }
 }
 

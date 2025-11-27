@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   function renderizarPerfil(container, nome, email, descricao, foto) {
     container.innerHTML = `
       <div class="perfil-topo">
-        <img src="${foto || "../perfil/imagens/sem-foto.png"}" id="foto-preview" class="avatar" alt="foto de perfil">
+        <img src="${foto || "./imagens/sem-foto.png"}" id="foto-preview" class="avatar" alt="foto de perfil">
         <div class="dados">
           <h2>${nome}</h2>
           <p>${email}</p>
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         div.innerHTML = `
           <div class="lugar-thumb">
-            <img src="${lugar.imagem || "../img/semfoto.png"}" alt="${lugar.nome_local}" class="thumb-img">
+            <img src="${lugar.imagem || "./imagens/sem-foto.png"}" alt="${lugar.nome_local}" class="thumb-img">
           </div>
           <div class="lugar-info">
             <h3>${lugar.nome_local}</h3>
